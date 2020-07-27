@@ -1,269 +1,236 @@
 <!DOCTYPE html>
-<html>
-<title>Home Page</title>
+<html lang="en">
+<title> Abhiskar Is Simp !</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bahnschrift">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.w3-sidebar a {font-family: "Bahnschrift", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
 </style>
-<body class="w3-content" style="max-width:1200px">
+<body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>Harry Osborn</b></h3>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> TLM </a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Members</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button"> aajha more ma click gareau bhanesi tmy mero beb </a>
+        <a href="#" class="w3-bar-item w3-button">  aajha more ma click gareau bhanesi tmy mero beb [ 2 ]</a>
+        <a href="#" class="w3-bar-item w3-button">  aajha more ma click gareau bhanesi tmy mero beb [ 3 ]</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="ele.html" class="w3-bar-item w3-button">Electronics</a>
-    <a href="f.html" class="w3-bar-item w3-button">Facebook</a>
-    <a href="Heart.html" class="w3-bar-item w3-button">Music</a>
-    <a href="photos.html" class="w3-bar-item w3-button">Photos</a>
-    <a href="phone.html" class="w3-bar-item w3-button">Mobile Phones </a>
-    <a href="cs.html" class="w3-bar-item w3-button"> Coming Soon </a>
-    <a href="cam.html" class="w3-bar-item w3-button"> Our Application </a>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:80px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">home</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TLM</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> ME</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:80px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="a.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-Black w3-padding-32 w3-hide-small">
      
-  </div>
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
-  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:250px">
-
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
-  
-  <!-- Top header -->
-  <header class="w3-container w3-xlarge">
-    <p class="w3-left">Article</p>
-    <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"></i>
-      <i class="fa fa-search"></i>
-    </p>
-  </header>
-
-  <!-- Image header -->
-  <div class="w3-display-container w3-container">
-    <img src="1.jpg" alt="Article" style="width:100%" height="150%">
-    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-      <h1 class="w3-jumbo w3-hide-small">ARTICLE BY </h1>
-      <h1 class="w3-hide-large w3-hide-medium">ARTICLE BY </h1>
-      <h1 class="w3-hide-small">HARRY OSBRON</h1>
-      <p><a href="#Article" class="w3-button w3-black w3-padding-large w3-large">READ NOW</a></p>
+      <header class="w3-container w3-center w3-padding-32"> 
+  <p> <span class="w3-tag"> Abhiskar Dhakal </span></p>
+  <p> <span class="w3-tag"> The proest of pro in simping ! </span></p>
+      </header>
+      
     </div>
   </div>
-   <div class="w3-container w3-text-grey" id="Article">
-    <p>8 items</p>
-  </div>
+  
 
-  <!-- Product grid -->
-  <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="ele.jpg" style="width: 100%; height: 100px;">
-          <div class="w3-display-middle w3-display-hover">
-           <a href="ele.html" class="w3-button w3-dark-grey"> Read Now <i class="fa fa-book"></i> </a>
-          </div>
-        </div>
-        <p>Electronics<br><b>Article by osborn</b></p>
-      </div> </div> 
-
-      <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="f.png" style="width: 100%; height: 100px;">
-          <span class="w3-tag w3-display-topleft">New</span>
-          <div class="w3-display-middle w3-display-hover">
-           <a href="f.html" class="w3-button w3-dark-grey"> Read Now <i class="fa fa-book"></i> </a>
-          </div>
-        </div>
-        <p>Facebook<br><b>Article by osborn</b></p>
-      </div> </div> 
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="1.jpg" style="width: 100%; height: 100px;">
-          <div class="w3-display-middle w3-display-hover">
-           <a href="harryosborndotcomdotnp.html" class="w3-button w3-dark-grey"> Read Now <i class="fa fa-book"></i> </a>
-          </div>
-        </div>
-        <p>Nature<br><b>Article by osborn</b></p>
-      </div> </div> 
-
-      <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="phone.jpg" style="width: 100%; height: 100px;">
-          <div class="w3-display-middle w3-display-hover">
-           <a href="phone.html" class="w3-button w3-dark-grey"> Read Now <i class="fa fa-book"></i> </a>
-          </div>
-        </div>
-        <p>Mobile Phones<br><b>Article by osborn</b></p>
-      </div> </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="i.jpg" style="width: 100%; height: 100px;">
-          <div class="w3-display-middle w3-display-hover">
-           <a href="#article" class="w3-button w3-dark-grey"> Article has been closed <i class="fa fa-frown-o"></i> </a>
-          </div>
-        </div>
-        <p>Instagram<br><b>Article by osborn</b></p>
-      </div> </div> 
-
+  <!-- what is simping section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+   <p> <b> <h1> What Is Simping Actually ? </h1> </b></h2> </p>
+    <p class="w3-justify"> “Simping” means foolishly over catering to the exaggerated emotions of women. Simping can also mean a man being in his feelings and allowing a women to take over his mind. The terms “Simp” and “Simping” nowadays is commonly used to criticize and mock men who overvalue women and feel entitled to women's attention.</p>
+    <p class="w3-opacity w3-right"> Answer By <i> <b> <a href="https://dailyrapfacts.com/12334/what-does-simp-and-simping-mean"> [ Dailyrapfacts] </a> </i> </b> </p> 
     
 
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="mov.jpg" style="width: 100%; height: 100px;">
-          <div class="w3-display-middle w3-display-hover">
-           <a href="#article" class="w3-button w3-dark-grey"> Article has been closed <i class="fa fa-frown-o"></i> </a>
-          </div>
-        </div>
-        <p>Movie<br><b>Article by osborn</b></p>
-      </div> </div> 
-     
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="m.jpg" style="width: 100%; height: 100px;">
-          <div class="w3-display-middle w3-display-hover">
-           <a href="heart.html" class="w3-button w3-dark-grey"> Listen <i class="fa fa-music"></i> </a>
-          </div>
-        </div>
-        <p>Music<br><b>Click To Listen Some Harry Fav Music</b></p>
-      </div> </div> 
-
-      <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="world-map.png" style="width: 100%; height: 100px;">
-          <div class="w3-display-middle w3-display-hover">
-           <a href="#article" class="w3-button w3-dark-grey"> Article has been closed <i class=" fa fa-frown-o"></i> </a>
-          </div>
-        </div>
-        <p>Country<br><b>Article by osborn</b></p>
-      </div>
-    </div> 
-  .
-  <!-- Subscribe section -->
   
-  <div class="w3-container w3-black w3-padding-32">
-    <h1>Subscribe</h1>
-    <p>To get special offers and VIP treatment:</p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
-  </div> 
-  
-  <!-- Footer -->
-  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
-    <div class="w3-row-padding">
-      <div class="w3-col s4">
-        <h4>Contact</h4>
-        <p>Questions? Go ahead.</p>
-        <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
-          <button type="submit" class="w3-button w3-block w3-black">Send</button>
-        </form>
-      </div>
 
-      <div class="w3-col s4">
-        <h4>About</h4>
-        <p><a href="#">About us</a></p>
-        <p><a href="#">We're hiring</a></p>
-        <p><a href="#">Support</a></p>
-        <p><a href="#">Find store</a></p>
-        <p><a href="#">Shipment</a></p>
-        <p><a href="#">Payment</a></p>
-        <p><a href="#">Gift card</a></p>
-        <p><a href="#">Return</a></p>
-        <p><a href="#">Help</a></p>
-      </div>
+  <!-- how abhiskar is simp -->
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i> How Is Abhiskar Simper ?</b></p><br>
+       <img src="b.jpg" style="width:100%" onclick="onClick(this)" alt="Photo Of Abhiskar">
+    </div>
 
-      <div class="w3-col s4 w3-justify">
-        <h4>Store</h4>
-        <p><i class="fa fa-fw fa-map-marker"></i> Harry Osborn.Co.Inc</p>
-        <p><i class="fa fa-fw fa-phone"></i>9816906852</p>
-        <p><i class="fa fa-fw fa-envelope"></i> whyamitheone990@email.com</p>
-        <h4>We accept</h4>
-        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
-        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+
+
+   
+      <p> 
+        
+       
+        
         <br>
-        <a href="https://www.facebook.com/harryosborn.com.np" rel="noreferrer" title="Facebook" target="_blank" class="facebook"> 
-          <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i> </a>
-        <a href="https://www.Instagram.com/harryosborn.com.np" rel="noreferrer" title="Instagram" target="_blank" class="instagram"> 
-          <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
-        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
-        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+          <h4>  According to mathi ko description abhiskar simp ho malai english aaena aani maile kei lekhina tara aabhiskar simp ho ! <br>
+            <p> He simps on a facebook group named " A group where you can ask anything " </p></h4>
+
+        </p>
+    </div>
+  </div>
+
+
+
+   
+  
+      <div class="w3-black  w3-hover-opacity-off w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge"> Join Group " A group where you can ask anything " </h1>
+        <hr class="w3-opacity">
+        <p> Description : We are the simplified nepali version of Google</p>
+       <a href="https://www.facebook.com/groups/984196542015465/" class="w3-block w3-button w3-green w3-round"> Join Group <i class="fa fa-home"> </i> </a> <br>
+        <a href="https://www.facebook.com/abe.es.kar" class="w3-block w3-button w3-red w3-round"> View Abhiskar Facebook Profile <i class="fa fa-male"> </i> </a>
+
       </div>
     </div>
-  </footer>
 
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"> Harry Osborn</a></div>
 
-  <!-- End page content -->
-</div>
-
-<!-- Newsletter Modal -->
-<div id="newsletter" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
-    <div class="w3-container w3-white w3-center">
-      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
-      <h2 class="w3-wide">NEWSLETTER</h2>
-      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+<div class="w3-padding-64 w3-white">
+  <div class="w3-row-padding">
+    <div class="w3-col l8 m6">
+      <img class="w3-image w3-round-large w3-hide-small " src="n.jpg" alt="App" width="335" height="471">
+      <h1 class="w3-xxxlarge w3-text-black w3-center"><b> Other Simps</h1>
+      <h1 class="w3-xxxlarge w3-text-red"><b> Nischal Kunwar </b></h1>
+      <p> <b> <h3><i>  Nischal sir ko ta k kurai garne sara FB bhari halla chha.  </h3> </b> <br>
+       <h4> lekhe bhane mero time waste.</p> </h4> </i>
+      <button class="w3-button w3-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">
+       <i> <a href="https://www.facebook.com/nischal.kunwar.14">  <i class=" fa fa-facebook"> Click Here View Facebook Profile Of Nischal </a>  </i> </a>
+      </button>
+      <p> </p>
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="n.jpg" class="w3-image w3-right w3-hide-small" width="335" height="471">
+      <div class="w3-center w3-hide-large w3-hide-medium">
+        <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
+          
+        </button>
+        
+      </div>
     </div>
   </div>
 </div>
 
+
+
+<!-- Clarity Section -->
+<div class="w3-padding-64 w3-light-grey">
+  <div class="w3-row-padding">
+    <div class="w3-col l4 m6">
+      <img class="w3-image w3-round-large w3-hide-small " src="ab.jpg" alt="App" width="335" height="471">
+    </div>
+    <div class="w3-col l8 m6">
+      <h1 class="w3-jumbo"><b></b></h1>
+      <h1 class="w3-xxxlarge w3-text-red"><b> आविस्कार पौडेल </b></h1>
+      <p> <b> <h4> Yo manxe ta simp hainh tara aaru manxe na bhetera haldeko . </h4> </b> <br>
+       <h5> yo manxe ni poudel nai ho poudel le poudel lai ta ramrai bhanos na hainh hehe.</p> </h5>
+        <button class="w3-button w3-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">
+       <i> <a href="https://www.facebook.com/aabishkar.sharma.3">  <i class=" fa fa-facebook"> Click Here View Facebook Profile Of आविस्कार पौडेल </a>  </i> </a>
+      </button>
+    </div>
+  </div>
+</div> </i> </button>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT ME [ रोहन पौड्याल
+ ] </h2>
+    <p class="w3-opacity w3-center"><i> Jay Shree Krishna !</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Damak, Jhapa<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +9816906852<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: whyamitheone990@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+ <a href="https://www.facebook.com/harryosborn.com.np" rel="noreferrer" title="Facebook" target="_blank" class="facebook"> 
+          <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i> </a>
+ <a href="https://www.Instagram.com/harryosborn.com.np" rel="noreferrer" title="Instagram" target="_blank" class="instagram"> 
+          <i class="fa fa-instagram w3-hover-opacity w3-large"></i> </a>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.facebook.com/harryosborn.apk" target="_blank"> Harry Osborn</a></p>
+</footer>
+
 <script>
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
-  } else {
+  } else { 
     x.className = x.className.replace(" w3-show", "");
   }
 }
 
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 </script>
 
